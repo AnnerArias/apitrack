@@ -13,7 +13,7 @@ app.get('/track', async (req, res) => {
     const browser = await puppeteer.launch({ 
         slowMo: 200,
         headless: true,
-        args: ['--disable-web-security'] // Deshabilitar la política de CORS
+        args: ['--disable-web-security', '--no-sandbox'] // Deshabilitar la política de CORS y añadir --no-sandbox
     });
     const page = await browser.newPage();
     // Set the viewport to 1920x1080

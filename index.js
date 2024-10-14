@@ -12,7 +12,7 @@ app.get('/track', async (req, res) => {
     // Lanzar un navegador con Puppeteer
     const browser = await puppeteer.launch({ 
         slowMo: 200,
-        headless: false,
+        headless: true,
         args: ['--disable-web-security'] // Deshabilitar la política de CORS
     });
     const page = await browser.newPage();
